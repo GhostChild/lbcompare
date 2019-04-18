@@ -17,6 +17,8 @@ type Resultdata struct {
 func main() {
 	e := echo.New()
 
+	e.Static("/", "assets")
+
 	data := &Resultdata{}
 
 	f, err := ioutil.ReadFile("data.json")
